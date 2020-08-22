@@ -17,3 +17,22 @@ function findNumberOfNonRepeats(arr) {
 }
 
 findNumberOfNonRepeats(['e',2,4,'f','f','r','f']);
+
+// 3. Return the second smallest number in a random array of numbers. There may be repeats of a number.
+
+function findSecondSmallest(arr) {
+  let smallestNum = arr[0];
+  let secondSmallestNum = arr[0];
+  for(let i = 1; i < arr.length; i++) {
+    if(arr[i] < smallestNum) {
+      smallestNum = arr[i];
+    }
+    else if( arr[i] < secondSmallestNum) {
+      secondSmallestNum = arr[i];
+    }
+        console.log('smallest',smallestNum);
+        console.log('second smallest',secondSmallestNum);
+  }
+  console.log('final',smallestNum, secondSmallestNum);
+}
+findSecondSmallest([10,2,2,3,1,4,0]);
