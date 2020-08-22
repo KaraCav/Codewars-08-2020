@@ -23,16 +23,16 @@ findNumberOfNonRepeats(['e',2,4,'f','f','r','f']);
 function findSecondSmallest(arr) {
   let smallestNum = arr[0];
   let secondSmallestNum = arr[0];
-  for(let i = 1; i < arr.length; i++) {
-    if(arr[i] < smallestNum) {
-      smallestNum = arr[i];
+  for(let i = 0; i < arr.length; i++) {
+    if (arr[i] < smallestNum) {
+        secondSmallestNum = smallestNum;
+        smallestNum = arr[i];
+    } else if ((arr[i] < secondSmallestNum) && (arr[i] !== smallestNum)) {
+        secondSmallestNum = arr[i];
     }
-    else if( arr[i] < secondSmallestNum) {
-      secondSmallestNum = arr[i];
-    }
-        console.log('smallest',smallestNum);
-        console.log('second smallest',secondSmallestNum);
-  }
-  console.log('final',smallestNum, secondSmallestNum);
+ }
+  console.log('smallest and second smallest numbers',smallestNum, secondSmallestNum);
+  return secondSmallestNum;
 }
-findSecondSmallest([10,2,2,3,1,4,0]);
+
+findSecondSmallest([2,-1,-3,10,2,3,-8,1,4,0,-8])
