@@ -36,3 +36,25 @@ function findSecondSmallest(arr) {
 }
 
 findSecondSmallest([2,-1,-3,10,2,3,-8,1,4,0,-8])
+
+// 4. You are given an array with positive numbers and a number N. You should find the N-th power of the element in the array with the index N. 
+// If N is outside of the array, then return -1. Don't forget that the first element has the index 0. Example:
+//    array = [1, 2, 3, 4] and N = 2, then the result is 3^2 == 9;
+
+function index(array, n){
+  if(n == 0) {
+    return 1;
+  }
+  if(!array[n])  {
+    return -1;
+  }
+  else {
+    let i = 1;
+    let finalAnswer = array[n];
+    while(i < n) {
+      finalAnswer = finalAnswer * array[n];
+      i++;
+    }
+    return finalAnswer;
+  }
+}
