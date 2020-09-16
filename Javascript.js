@@ -48,6 +48,9 @@ function index(array, n){
   if(!array[n])  {
     return -1;
   }
+ else if(array[n] == 0) {
+    return 0;
+  }
   else {
     let i = 1;
     let finalAnswer = array[n];
