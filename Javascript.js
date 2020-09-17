@@ -61,3 +61,27 @@ function index(array, n){
     return finalAnswer;
   }
 }
+
+// 4b. Simplified Answer 1
+function index(array, n){
+  if(array.length-1 < n){
+    return -1;
+  } else{
+    var answer = 1;
+    for(var x = 0; x < n; x++){
+      answer = answer * array[n];
+    }
+    return answer;
+  }
+}
+
+// 4c. Simplified Answer 2
+function index(array, n){
+    for(let i = 0; i < array.length; i++){
+    if (i == n) {
+      return Math.pow(array[i],n);
+      break;
+    }
+   } 
+  return -1;
+}
